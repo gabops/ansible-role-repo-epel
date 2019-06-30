@@ -1,0 +1,8 @@
+---
+- name: Configure status of repositories
+  ini_file:
+    path: "{{ item.repo_file }}"
+    section: "{{ item.id }}"
+    option: enabled
+    value: "{{ item.status | int }}"
+  loop: "{{ repo_epel_repositories }}"

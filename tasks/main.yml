@@ -1,15 +1,6 @@
 ---
 - import_tasks: variables.yml
 
-- name: Install EPEL repository package
-  yum:
-    name: "{{ repo_epel_url }}"
-    state: present
+- import_tasks: install.yml
 
-- name: Configure status of repositories
-  ini_file:
-    path: "{{ item.repo_file }}"
-    section: "{{ item.id }}"
-    option: enabled
-    value: "{{ item.status | int }}"
-  loop: "{{ repo_epel_repositories }}"
+- import_tasks: configure.yml
