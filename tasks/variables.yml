@@ -1,0 +1,62 @@
+---
+- name: Set repo package version for Amazon Linux 1
+  set_fact:
+    ansible_distribution_major_version: 6
+  when: ansible_distribution == "Amazon" and ansible_distribution_version == "NA"
+
+- name: Set repo package version for Amazon Linux 2
+  set_fact:
+    ansible_distribution_major_version: 7
+  when: ansible_distribution == "Amazon" and ansible_distribution_version == "2"
+
+- name: Set id and status for epel repository
+  set_fact:
+    repo_epel_repo:
+      id: epel
+      status: "{{ repo_epel_enable_epel }}"
+      repo_file: "{{ repo_epel_yum_repo_path }}"
+
+- name: Set id and status for epel debuginfo repository
+  set_fact:
+    repo_epel_debug_repo:
+      id: epel-debuginfo
+      status: "{{ repo_epel_enable_epel_debuginfo }}"
+      repo_file: "{{ repo_epel_yum_repo_path  }}"
+
+- name: Set id and status for epel source repository
+  set_fact:
+    repo_epel_source_repo:
+      id: epel-source
+      status: "{{ repo_epel_enable_epel_source }}"
+      repo_file: "{{ repo_epel_yum_repo_path  }}"
+
+- name: Set id and status for epel testing repository
+  set_fact:
+    repo_repo_epel_testing_repo:
+      id: epel-testing
+      status: "{{ repo_epel_enable_epel_testing }}"
+      repo_file: "{{ repo_epel_yum_repo_testing_path }}"
+
+- name: Set id and status for epel debuginfo repository
+  set_fact:
+    repo_repo_epel_testing_debuginfo_repo:
+      id: epel-testing-debuginfo
+      status: "{{ repo_epel_enable_epel_testing_debuginfo }}"
+      repo_file: "{{ repo_epel_yum_repo_testing_path }}"
+
+- name: Set id and status for epel source repository
+  set_fact:
+    repo_repo_epel_testing_source_repo:
+      id: epel-testing-source
+      status: "{{ repo_epel_enable_epel_testing_source }}"
+      repo_file: "{{ repo_epel_yum_repo_testing_path }}"
+
+- name: Set list of all configured repositories
+  set_fact:
+    repo_epel_repositories:
+      - "{{ repo_epel_repo }}"
+      - "{{ repo_epel_debug_repo }}"
+      - "{{ repo_epel_source_repo }}"
+      - "{{ repo_repo_epel_testing_repo }}"
+      - "{{ repo_repo_epel_testing_debuginfo_repo }}"
+      - "{{ repo_repo_epel_testing_source_repo }}"
