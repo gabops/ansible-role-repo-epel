@@ -1,5 +1,6 @@
 gabops.repo_epel
 ================
+[![Build Status](https://travis-ci.org/gabops/ansible-role-repo-epel.svg?branch=develop)](https://travis-ci.org/gabops/ansible-role-repo-epel)
 
 Installs and configures Extra Packages for Enterprise Linux (EPEL) repository
 
