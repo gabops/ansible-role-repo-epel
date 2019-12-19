@@ -7,7 +7,7 @@ Installs and configures Extra Packages for Enterprise Linux (EPEL) repository
 Requirements
 ------------
 
-This role requires the taret system to be a Redhat family OS. Specifically: (See meta/main.yml):
+This role requires the target system to be a Redhat family OS. Specifically: (See meta/main.yml):
 
 ```yaml
   platforms:
