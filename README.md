@@ -27,7 +27,7 @@ Role Variables
 |repo_epel_enable_epel_testing | false | Controls if `epel-testing` repo should be enabled or not |
 |repo_epel_enable_epel_testing_debuginfo | false | Controls if `epel-testing-debuginfo` repo should be enabled or not |
 |repo_epel_enable_epel_testing_source | false | Controls if `epel-testing-source` repo should be enabled or not |
-|repo_epel_url | "https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm" | The url pointing to the epel repository package that will be installed |
+
 
 Dependencies
 ------------
