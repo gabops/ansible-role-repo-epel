@@ -1,1 +1,3 @@
 ---
+repo_epel_file_path: /etc/yum.repos.d/epel.repo
+repo_epel_testing_file_path: /etc/yum.repos.d/epel-testing.repo
