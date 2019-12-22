@@ -10,5 +10,3 @@ repo_epel_enable_epel_testing: false
 repo_epel_enable_epel_testing_debuginfo: false
 
 repo_epel_enable_epel_testing_source: false
-
-repo_epel_url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm"

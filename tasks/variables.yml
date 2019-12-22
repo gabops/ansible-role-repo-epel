@@ -1,13 +1,17 @@
 ---
-- name: Set repo package version for Amazon Linux 1
+- name: Set repo url for CentOS 6 / Amazon Linux 1
   set_fact:
-    ansible_distribution_major_version: "6"
-  when: ansible_distribution == "Amazon" and ansible_distribution_version == "NA"
+    repo_epel_url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm"
+  when: >
+    ansible_distribution == "CentOS" and ansible_distribution_major_version == "6" or
+    ansible_distribution == "Amazon" and ansible_distribution_version == "NA"
 
-- name: Set repo package version for Amazon Linux 2
+- name: Set repo url for CentOS 7 / Amazon Linux 2
   set_fact:
-    ansible_distribution_major_version: "7"
-  when: ansible_distribution == "Amazon" and ansible_distribution_version == "2"
+    repo_epel_url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+  when: >
+    ansible_distribution == "CentOS" and ansible_distribution_major_version == "7" or
+    ansible_distribution == "Amazon" and ansible_distribution_version == "2"
 
 - name: Set list of all configured repositories
   set_fact:
