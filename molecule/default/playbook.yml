@@ -1,5 +1,7 @@
 ---
 - name: Converge
   hosts: all
+  vars:
+    repo_epel_enable_epel_testing: true
   roles:
     - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
