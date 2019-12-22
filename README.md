@@ -7,22 +7,13 @@ Installs and configures Extra Packages for Enterprise Linux (EPEL) repository
 Requirements
 ------------
 
-This role requires the target system to be a Redhat family OS. Specifically: (See meta/main.yml):
+This role requires the target system to be a Redhat family OS. Specifically:
 
-```yaml
-  platforms:
-    - name: EL
-      versions:
-        - 6
-        - 7
-    - name: Amazon
-      versions:
-        - 2016.09
-        - 2017.03
-        - 2017.09
-        - 2017.12
-        - Candidate
-```
+
+1. Amazon Linux 1
+2. Amazon Linux 2
+3. CentOS 6
+4. CentOS 7
  
 
 Role Variables
@@ -37,9 +28,6 @@ Role Variables
 |repo_epel_enable_epel_testing_debuginfo | false | Controls if `epel-testing-debuginfo` repo should be enabled or not |
 |repo_epel_enable_epel_testing_source | false | Controls if `epel-testing-source` repo should be enabled or not |
 |repo_epel_url | "https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm" | The url pointing to the epel repository package that will be installed |
-|repo_epel_yum_repo_file | /etc/yum.repos.d/epel.repo | The path to the epel repo file |
-|repo_epel_testing_yum_repo_file | /etc/yum.repos.d/epel-testing.repo | The path to the epel testing repo file |
-
 
 Dependencies
 ------------
