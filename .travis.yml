@@ -11,10 +11,11 @@ env:
     - TEST_DISTRO: amazonlinux:2017.09
     - TEST_DISTRO: amazonlinux:2017.12
     - TEST_DISTRO: amazonlinux:2018.03
+    - TEST_DISTRO: amazonlinux:1
     - TEST_DISTRO: amazonlinux:2
 
 install:
-  - pip install molecule==2.22rc1 docker flake8
+  - pip install -r molecule/requirements.txt
 
 script:
   - molecule test
