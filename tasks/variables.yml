@@ -18,30 +18,30 @@
     repo_epel_repositories:
       repo_epel_repo:
         id: epel
-        status: "{{ repo_epel_enable_epel }}"
+        enabled: "{{ repo_epel_enable_epel }}"
         repo_file: "{{ repo_epel_file_path }}"
 
       repo_epel_debug_repo:
         id: epel-debuginfo
-        status: "{{ repo_epel_enable_epel_debuginfo }}"
+        enabled: "{{ repo_epel_enable_epel_debuginfo }}"
         repo_file: "{{ repo_epel_file_path }}"
 
       repo_epel_source_repo:
         id: epel-source
-        status: "{{ repo_epel_enable_epel_source }}"
+        enabled: "{{ repo_epel_enable_epel_source }}"
         repo_file: "{{ repo_epel_file_path }}"
 
       repo_repo_epel_testing_repo:
         id: epel-testing
-        status: "{{ repo_epel_enable_epel_testing }}"
+        enabled: "{{ repo_epel_enable_epel_testing }}"
         repo_file: "{{ repo_epel_testing_file_path }}"
 
       repo_repo_epel_testing_debuginfo_repo:
         id: epel-testing-debuginfo
-        status: "{{ repo_epel_enable_epel_testing_debuginfo }}"
+        enabled: "{{ repo_epel_enable_epel_testing_debuginfo }}"
         repo_file: "{{ repo_epel_testing_file_path }}"
 
       repo_repo_epel_testing_source_repo:
         id: epel-testing-source
-        status: "{{ repo_epel_enable_epel_testing_source }}"
+        enabled: "{{ repo_epel_enable_epel_testing_source }}"
         repo_file: "{{ repo_epel_testing_file_path }}"

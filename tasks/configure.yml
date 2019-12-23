@@ -4,5 +4,5 @@
     path: "{{ item.value.repo_file }}"
     section: "{{ item.value.id }}"
     option: enabled
-    value: "{{ item.value.status | int }}"
+    value: "{{ item.value.enabled | int }}"
   loop: "{{ repo_epel_repositories | dict2items }}"
