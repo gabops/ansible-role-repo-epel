@@ -5,4 +5,4 @@
     section: "{{ item.value.id }}"
     option: enabled
     value: "{{ item.value.enabled | int }}"
-  loop: "{{ repo_epel_repositories | dict2items }}"
+  loop: "{{ repo_epel_repositories | default({}) | dict2items }}"
